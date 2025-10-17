@@ -1,132 +1,200 @@
-/* Estilos personalizados para WCM Retífica de Motores - Versão robusta */
+/* Estilos personalizados para WCM Retífica de Motores */
+:root {
+    --primary-blue: #0d47a1;
+    --secondary-blue: #1976d2;
+    --warning: #ffc107;
+    --warning-hover: #e0a800;
+    --shadow: rgba(0, 0, 0, 0.2);
+}
+
 .hero-section {
-background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
-background-size: cover;
-background-position: center;
-min-height: 80vh;
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
+
 .hero-section::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0,0,0,0.4);
-z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
-.hero-content {
-position: relative;
-z-index: 2;
-max-width: 800px;
-padding: 20px;
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
 }
+
+.hero-section h1,
+.hero-section p.lead,
+.hero-section p.fs-5 {
+    color: white;
+    z-index: 3;
+    position: relative;
+}
+
+.hero-section p.fs-5 {
+    font-size: 1.25rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
 /* Animações */
 @keyframes fadeIn {
-0% { opacity: 0; transform: translateY(30px); }
-100% { opacity: 1; transform: translateY(0); }
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
+
 @keyframes pulse {
-0% { transform: scale(1); }
-50% { transform: scale(1.05); }
-100% { transform: scale(1); }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
+
 .animate__fadeIn {
-animation: fadeIn 1s ease-in;
+    animation: fadeIn 1s ease-in;
 }
-.animate__pulse {
-animation: pulse 2s infinite;
+
+.animate__pulse:hover {
+    animation: pulse 0.5s ease-in-out;
 }
+
 .animate__card {
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .animate__card:hover {
-transform: translateY(-10px);
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px var(--shadow);
 }
+
 /* Navbar */
-.navbar {
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+.navbar.navbar-dark.bg-dark {
+    box-shadow: 0 2px 10px var(--shadow);
 }
+
 .navbar-brand {
-font-weight: 700 !important;
-font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
 }
+
 .nav-link {
-font-weight: 500;
-transition: color 0.3s ease;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
+
 .nav-link:hover {
-color: #ffc107 !important;
+    color: var(--warning);
 }
+
 /* Cards */
 .card {
-border: none !important;
-border-radius: 12px !important;
-overflow: hidden;
-background: #fff !important;
-box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 10px var(--shadow);
 }
+
 .card:hover {
-box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+    box-shadow: 0 8px 25px var(--shadow);
 }
+
 /* Botões */
 .btn-warning {
-background: #ffc107 !important;
-border-color: #ffc107 !important;
-color: #212529 !important;
-font-weight: bold;
+    background: var(--warning);
+    border-color: var(--warning);
+    color: #212529;
+    font-weight: bold;
 }
+
 .btn-warning:hover {
-background: #e0a800 !important;
-border-color: #d39e00 !important;
-transform: translateY(-2px);
-box-shadow: 0 4px 15px rgba(255,193,7,0.4);
+    background: var(--warning-hover);
+    border-color: var(--warning-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
 }
+
 /* Formulário */
 .form-control {
-border-radius: 8px !important;
-border: 1px solid #ced4da !important;
-padding: 12px 15px !important;
-transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 12px 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .form-control:focus {
-border-color: #0d47a1 !important;
-box-shadow: 0 0 0 0.2rem rgba(13, 71, 161, 0.25) !important;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(13, 71, 161, 0.25);
 }
+
+.form-control:invalid.was-validated {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875rem;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback {
+    display: block;
+}
+
 /* Footer */
-footer {
-background: #212529 !important;
-color: #fff !important;
+footer.bg-dark {
+    color: #fff;
 }
+
 footer a {
-color: #ffc107 !important;
-text-decoration: none;
+    color: var(--warning);
+    text-decoration: none;
 }
+
 footer a:hover {
-text-decoration: underline !important;
+    text-decoration: underline;
 }
-/* Responsividade */
-@media (max-width: 768px) {
-.hero-content h1 {
-font-size: 2.5rem !important;
-}
-.hero-content p.lead {
-font-size: 1.1rem !important;
-}
-.hero-content p.fs-5 {
-font-size: 1rem !important;
-}
-}
+
 /* Ícones Bootstrap */
 .bi {
-font-size: 3rem;
-transition: color 0.3s ease;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
 }
+
 .card .bi:hover {
-color: #0d47a1 !important;
+    color: var(--primary-blue);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section p.lead {
+        font-size: 1.1rem;
+    }
+    .hero-section p.fs-5 {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .hero-section .container {
+        padding: 15px;
+    }
+    .bi {
+        font-size: 2rem;
+    }
 }
