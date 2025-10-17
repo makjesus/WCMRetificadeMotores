@@ -1,0 +1,73 @@
+/* Estilos personalizados para WCM Retífica de Motores */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1617077478108-0f3cc73f1e6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animações */
+.animate__fadeIn {
+    animation: fadeIn 1s ease-in;
+}
+
+.animate__pulse {
+    animation: pulse 2s infinite;
+}
+
+.animate__card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animate__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Estilização adicional */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand, .nav-link {
+    font-weight: 600;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.btn-warning {
+    background: #ffc107;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
